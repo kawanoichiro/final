@@ -10,16 +10,8 @@ $result = $pdo->prepare($sql);
 $result->execute([$_GET['cooking_id']]);
 $row = $result->fetch();
 ?>
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=de
-    vice-width, initial-scale=1.0">
-    <title>レシピ削除画面</title>
-</head>
-<body>
-<h2></h2>
+
+<h3 class="title is-3 has-text-centered">レシピ削除</h3>
 <div class="content">
 <div class="container">
 <nav class="level">
