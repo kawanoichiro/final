@@ -18,7 +18,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['cooking_id'])) {
         $stmt->execute();
 
         // 削除成功メッセージ
+        echo '<nav class="level">';
+        //<!-- 中央揃え -->
+        echo '<div class="level-item">';
         echo "レシピが削除されました。";
+        echo '</div>';
+        echo '</nav>';
     } catch (PDOException $e) {
         echo "Error: " . $e->getMessage();
     } finally {
@@ -32,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['cooking_id'])) {
 <nav class="level">
 <!-- 中央揃え -->
 <div class="level-item">
-<p><button onclick = "location.href='ichiran.php'">レシピ一覧へ</button></p>
+<p><button class="button has-background-success-dark has-text-white" onclick = "location.href='ichiran.php'">レシピ一覧へ</button></p>
 </div>
 </div>
 </div>

@@ -18,8 +18,11 @@ $row = $result->fetch();
 <div class="level-item">   
 <form action="koushin-output.php" method="post">
         <input type="hidden" name="cooking_id" value="<?= $row['cooking_id'] ?>">
-        <input type="text" name="cooking_name" value="<?= $row['cooking_name'] ?>" required><br>
-        <input type="text" name="category" value="<?= $row['category'] ?>" required><br>         
+        　レシピ名：<input type="text" name="cooking_name" value="<?= $row['cooking_name'] ?>" required><br>
+        カテゴリー：<input type="text" name="category" value="<?= $row['category'] ?>" required><br>
+        <nav class="level">
+            <!-- 中央揃え -->
+        <div class="level-item">        
         <input class="button has-background-success-dark has-text-white" type="submit" value="更新">
 </form>
 </div>
